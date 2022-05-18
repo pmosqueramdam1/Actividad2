@@ -1,8 +1,10 @@
-package ende;
-
 /**
  * Simula el juego de Piedra, Papel o tijera
  */
+
+package ende;
+
+
 
 
 public class Juego 
