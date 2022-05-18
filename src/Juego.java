@@ -81,20 +81,10 @@ public class Juego
 class Jugador{
 
     int exitos;      // número de partidas ganadas
-    int winTotal;
-
-    public void setExitos()
-    {
-        exitos++;
-    }
-    public int getExitos()
-    {
-        return(exitos);
-    }
     public String opcion_al_azar()
     {
         String opcion="";
-        Integer c = (int)(Math.random()*3);
+        int c = (int)(Math.random()*3);
         switch(c) {
             case 0:
             	opcion=("piedra");
