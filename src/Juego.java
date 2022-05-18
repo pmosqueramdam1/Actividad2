@@ -4,9 +4,6 @@
 
 package ende;
 
-
-
-
 public class Juego 
 {
     public static void main(String args[])
@@ -77,13 +74,21 @@ public class Juego
     }
 }
 /**
- *
+ * Escoge piedra, papel o tijera al azar
  */
 class Jugador{
-   
-    /**
-     * Escoge piedra, papel o tijera al azar
-     */
+
+    public void setÉxitos()
+    {
+        éxitos++;
+    }
+    public int getÉxitos()
+    {
+        return(éxitos);
+    }
+
+    int éxitos;      // número de partidas ganadas
+    int winTotal;
     public String opcion_al_azar()
     {
         String opcion="";
@@ -100,15 +105,4 @@ class Jugador{
         }
         return opcion;
     }
-    public void setÉxitos() 
-    {
-        éxitos++;
-    }
-    public int getÉxitos() 
-    {
-        return(éxitos);
-    }
-    
-    int éxitos;      // número de partidas ganadas
-    int winTotal;
 }
