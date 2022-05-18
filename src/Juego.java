@@ -11,60 +11,60 @@ public class Juego
         Jugador p1=new Jugador();
         Jugador p2=new Jugador();
         boolean finDeJuego=false;
-        Integer Rondasjugadas = 0;    // Número de rondas jugadas
-        Integer EXITOSJugador1=p1.exitos;
-        Integer EXITOSJugador2=p2.exitos;
+        Integer rondasJugadas = 0;    // Número de rondas jugadas
+        Integer ExitosJugador1=p1.exitos;
+        Integer ExitosJugador2=p2.exitos;
         Integer Empates = 0;
-        String opcionJUGADOR1;
-        String opcionJUGADOR2;
+        String opcionJugador1;
+        String opcionJugador2;
         
         // Bucle de juego
         do
         {
-            System.out.println("***** Ronda: " + Rondasjugadas+" *********************\n");
+            System.out.println("***** Ronda: " + rondasJugadas+" *********************\n");
             System.out.println("Numero de empates: "+ Empates + "\n");
-            opcionJUGADOR1=p1.opcion_al_azar();
-            System.out.println("Jugador 1: " + opcionJUGADOR1+"\t Jugador 1 - Partidas ganadas: " + EXITOSJugador1);
-            opcionJUGADOR2 = p2.opcion_al_azar();
-            System.out.println("Jugador 2: " + opcionJUGADOR2+"\t Jugador 2 - Partidas ganadas: " + EXITOSJugador2);
+            opcionJugador1=p1.opcion_al_azar();
+            System.out.println("Jugador 1: " + opcionJugador1+"\t Jugador 1 - Partidas ganadas: " + ExitosJugador1);
+            opcionJugador2 = p2.opcion_al_azar();
+            System.out.println("Jugador 2: " + opcionJugador2+"\t Jugador 2 - Partidas ganadas: " + ExitosJugador2);
             
-            if((opcionJUGADOR1.equals("piedra"))&&(opcionJUGADOR2.equals("papel")))
+            if((opcionJugador1.equals("piedra"))&&(opcionJugador2.equals("papel")))
             {
                 System.out.println("Jugador 2 GANA");
-                EXITOSJugador2 = ++p2.exitos;
+                ExitosJugador2 = ++p2.exitos;
                 
             }
-            else if((opcionJUGADOR1.equals("papel"))&&(opcionJUGADOR2.equals("piedra")))
+            else if((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("piedra")))
             {
-            	EXITOSJugador1 = ++p1.exitos;
+            	ExitosJugador1 = ++p1.exitos;
                 System.out.println("Jugador 1 GANA");
             }
-            else if((opcionJUGADOR1.equals("piedra"))&&(opcionJUGADOR2.equals("tijeras")))
+            else if((opcionJugador1.equals("piedra"))&&(opcionJugador2.equals("tijeras")))
             {
-            	EXITOSJugador1 = ++p1.exitos;
+            	ExitosJugador1 = ++p1.exitos;
                 System.out.println("Jugador 1 GANA");
             }
-            else if((opcionJUGADOR1.equals("tijeras"))&&(opcionJUGADOR2.equals("piedra")))
+            else if((opcionJugador1.equals("tijeras"))&&(opcionJugador2.equals("piedra")))
             {
-            	EXITOSJugador2 = ++p2.exitos;
+            	ExitosJugador2 = ++p2.exitos;
                 System.out.println("Jugador 2 GANA");
             }
-            else if((opcionJUGADOR1.equals("tijeras"))&&(opcionJUGADOR2.equals("papel")))
+            else if((opcionJugador1.equals("tijeras"))&&(opcionJugador2.equals("papel")))
             {
-            	EXITOSJugador1 = ++p1.exitos;
+            	ExitosJugador1 = ++p1.exitos;
                 System.out.println("Jugador 1 GANA");
             }
-            else if((opcionJUGADOR1.equals("papel"))&&(opcionJUGADOR2.equals("tijeras")))
+            else if((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras")))
             {
-            	EXITOSJugador2 = ++p2.exitos;
+            	ExitosJugador2 = ++p2.exitos;
                 System.out.println("Jugador 2 GANA");
             }
-            if(opcionJUGADOR1==opcionJUGADOR2)
+            if(opcionJugador1==opcionJugador2)
             {
             	Empates++;
                 System.out.println("\n\t\t\t Empate \n");
             }
-            Rondasjugadas++;
+            rondasJugadas++;
             if((p1.exitos >=3)||(p2.exitos >=3))
             {
             	finDeJuego=true;
