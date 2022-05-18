@@ -78,6 +78,9 @@ public class Juego
  */
 class Jugador{
 
+    int éxitos;      // número de partidas ganadas
+    int winTotal;
+
     public void setÉxitos()
     {
         éxitos++;
@@ -86,9 +89,6 @@ class Jugador{
     {
         return(éxitos);
     }
-
-    int éxitos;      // número de partidas ganadas
-    int winTotal;
     public String opcion_al_azar()
     {
         String opcion="";
